@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        //function greet(){
+            //console.log("Hello pavan")
+        //}
+        //greet()
+        //console.log("hello sai")
+        //greet()
+        //console.log("hi gowtham")
+        //greet()
+        //function g(name){
+            //console.log("hello"+name)
+        //}
+        //let name=prompt("Enter your name?")
+        //g(name)
+
+        // console.log(name)
+        
+//Write a function to add 2 numbers and 2 arguments
+        //function add (a,b){
+            //console.log(a+b)
+            //}
+            //add(3,5)
+            //add(7,3)  
+            //function a(aa,bb){
+                //return aa+bb;
+            //}
+            //let n1=parseFloat(prompt("enter a number1"))
+            //let n2=parseFloat(prompt("enter a number2"))
+            ///calling a function
+            //let result = a(n1, n2);
+            //document.write("the sum is :+result")
+            sum=function(n1,n2){
+                let r=n1+n2
+                return r 
+            }
+            console.log(sum(8,9))
+    </script>
+</body>
+</html>
+
+
+
+Theory notes :
+A function is a reusable block of code.
+It can be called anywhere in the program.
+---Reusable code : using an existing code without writing it ever we need.
+You can use the same code with different arguments to get the results
+
+JS:
+Key Word = function
+()
+Parameters = values which are declared inside the () while defining a functions
+Arguments : values which are passed through the parameters.
+
+Ex: function with parameters
+Write a function to add 2 numbers and 2 arguments
+
+Function add (a,b){
+console.log(a+b)
+}
+add(3,5)
+add(7,3)
+Function return:
+--The return statement can be used to return the value to function call
+
+Anonymous function:
+A function with out name , after we create a function with out name and we assign it to a variable.
+
+
+
