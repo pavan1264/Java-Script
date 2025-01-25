@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function mainfunction(callback){
+            //Console.log("executing main the function");
+            //callback()
+            //here we call the callback function
+            //}
+            //function callbackFunction(){
+            //console.log("callback function executed")
+            //}
+            //mainfunction(callbackFunction);
+
+
+            //function greet(name ,callback){
+                //console.log("hello" +name);
+                //callback();
+                //executes the call back function after greeting
+                //}
+                //function goodbye(){
+                //console.log("Goodbye!")
+                //}
+                //greet("pavan" ,goodbye); 
+
+
+                //function greet(name ,callback){
+                    //console.log("hello" +name);
+                    //callback();
+                    //}
+                    //greet("pavan" ,function() {
+                        //console.log("goodbye!")
+                    //});////anonymous function as callback
+
+
+                    //EX: //Asynchronous callback with setTimeout
+                    //function fetchData(callback){
+                        //document.write("Fetching data from the server... <br>");
+                        //setTimeout(function(){
+                            //document.write("Data fetched successfully!<br>");
+                            //callback()
+                        //},2000);
+                    //}
+                    //function processData(){
+                        //document.write("Processing the fetched data... <br>");
+                    //}
+                    //fetchData(processData);
+                    
+
+                    //ex: //using a callback with array methods(map)
+                    //const nums=[1,2,3,4,5]
+                    //const d=nums.map(function(num){
+                        //return num*2
+                    //});
+                    //console.log(d);
+
+
+
+                    function registerUser(username,email,callback){
+                        console.log("registering user"+username);
+                        setTimeout(function(){
+                            console.log("user"+username+"reistered successfully");
+                            callback(email);
+                        },2000);
+                        }
+                    
+                    function sendWelcomeEmail(email){
+                        console.log("sending welcome email to"+email);
+                    };
+                    registerUser("Ram","123@mail.com",sendWelcomeEmail);
+
+    </script>
+</body>
+</html>
+
+
+theory notes :
+---you can pass the callback function as an argument to another function
+
+Execution:
+The function receiving the callback will execute the callback at some point during execution(often at the end or after an asynchronous operation is done)
+
+Example:
+function mainfunction(callback){
+Console.log("executing main the function");
+callback()
+//here we call the callback function
+}
+function callbackFunction(){
+console.log("callback Function executed")
+}
+mainfunction(callbackFunction); 
+
+Exp:
+Mainfunction takes a parameter callback
+Callback function is passed an argument 
+
+--output:
+mainfunction(callbackFunction);
+It will execute
+
+Example 2:
+Passing a named function as a callback;
+
+function greet(name ,callback){
+                console.log("hello" +name);
+                callback();
+                //executes the call back function after greeting
+                }
+                function goodbye(){
+                console.log("Goodbye!")
+                }
+                greet("pavan" ,goodbye);
+
+Example 3:
+Using an anonymous function as a callback
+
+function greet(name ,callback){
+                    console.log("hello" +name);
+                    callback();
+                    }
+                    greet("pavan" ,function() {
+                        console.log("goodbye!")
+                    });////anonymous function as callback
+
+Example 4:
+Asynchronous callback with setTimeout:
+
+ EX: //Asynchronous callback with setTimeout
+                    function fetchData(callback){
+                        document.write("Fetching data from the server... <br>");
+                        setTimeout(function(){
+                            document.write("Data fetched successfully!<br>");
+                            callback()
+                        },2000);
+                    }
+                    function processData(){
+                        document.write("Processing the fetched data... <br>");
+                    }
+                    fetchData(processData);
+
+Example 5:
+Using a callback with array methods(map)
+                    const nums=[1,2,3,4,5]
+                    const d=nums.map(function(num){
+                        return num*2
+                    });
+                    console.log(d);
+
+
+
+
+
