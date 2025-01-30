@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>  -->
+    // <!-- let title;
+    // for (let i = 0; i < 3; i++) {
+    //     title = document.createElement('h2');  
+    //     title.className = "tt"; 
+    //     title.textContent = i;  
+    //     document.body.appendChild(title);  
+    //     console.log(title); 
+    // } -->
+<!-- 
+//     const titles = ["hari", "charan", "ram"];
+
+// for (let i = 0; i < titles.length; i++) {
+//     let title = document.createElement('h1');  
+//     title.className = "a"; 
+//     title.textContent = titles[i];  
+//     document.body.appendChild(title); 
+// } -->
+
+<!-- <h1>Removing Child Node</h1>
+<h2>I am Kishore</h2>
+<ul>
+    <li>hari</li>
+    <li>charan</li>
+    <li>ram</li>
+</ul>
+
+<script>
+    const ul = document.querySelector('ul');  
+    const lists = document.querySelectorAll('li');  
+
+    for (const list of lists) {
+        console.log(Removing: ${list.textContent});
+        ul.removeChild(list);
+    } -->
+
+    <div id="a">
+        <h1>Hari</h1>
+        <h1>Ram</h1>
+    </div>
+    <div id="b">
+        <h1>Krishna</h1>
+        <h1>Ravan</h1>
+    </div>
+     <script>
+        let n = document.createElement("h2")
+        n.textContent="hari is the team lead"
+        ///get the parent element
+        let p = document.getElementById("b")
+        console.log(p.innerText)
+        p.appendChild(n)
+        console.log(p)
+        console.log(p.innerText)
+   
+</script>
+</body>
+</html>
