@@ -1,0 +1,20 @@
+React js :
+1.Javascript -library :
+2.Single page applications
+#all the updated
+#components :
+#update specify # updated
+#refreshed
+#amazon
+ to install React js :
+1.download node js;
+
+Command prompt :
+node -v
+npm -v
+
+npx create-react-app my-app
+
+cd my-app
+
+npm start
