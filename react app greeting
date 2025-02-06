@@ -1,0 +1,69 @@
+import React from "react";
+import './App.css';
+import Welcome from './weclome'
+const Welcome=()=><h1 className="message">Hello Hari</h1>
+function app() {
+  // return(
+  //   <div className="App">
+  //     <Welcome/>
+  //   </div>
+  // )
+
+  return(
+    <div style={{textAlign:'center' ,color:'red'}}>
+      <Welcome name="Hari" greeting="Hello"/>
+      <Welcome name="Ram" greeting="hi"/>
+    </div>
+  )
+}
+export default app;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <noscript>you need to enable javaScript to run this</noscript>
+</body>
+</html>
+import React from "react";
+const Welcome=(props)=>{
+    const {name ,greeting}=props
+    return(
+        <h1 className="message">{greeting},{name}</h1>
+
+    )
+}
+export default Welcome;
+ .message{
+  color:blue;
+  background-color: aquamarine;
+font-size: 40px;
+  text-align: center;
+  width:30%;
+ }
+
+06-02-2025
+#empty folder
+#npx-nope package executor
+create react app
+-npx create-react-my-app  #here my-appp is our project name
+cd my-app                 #change directory(folder)
+npmm start                #to startnthe react application
+
+
+
+project folder:
+public/index.html:the main html file that servers as the entry point for the app
+
+src/index.js:the js entry point for the react app where the DOM is rendered
+
+src/app.js:the main component that serves as the root of the component tree
+
+src/components:aA folder to store reusable components
+
+1.components : are the core building block of the react application
+--the help to create reusable block of code
+--if any thing goes wrong in UI
