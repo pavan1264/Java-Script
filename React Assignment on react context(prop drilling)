@@ -1,0 +1,30 @@
+import React from "react";
+
+function App() {
+  const user = {
+    name: "pavan",
+    email: "pavan1234@gmail.com",
+  };
+
+  return <Parent user={user} />;
+}
+
+function Parent({ user }) {
+  return <Child user={user} />;
+}
+
+function Child({ user }) {
+  return <Profile user={user} />;
+}
+
+function Profile({ user }) {
+  return (
+    <div>
+      <h2>User Profile (Prop Drilling)</h2>
+      <p>Name: {user.name}</p>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+}
+
+export default App;
