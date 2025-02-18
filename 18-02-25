@@ -1,0 +1,17 @@
+import React,{useState} from 'react';
+import'./App.css';
+function App(){
+    const[key,setkey]=useState("");
+    const handleKeyDown=(event)=>{
+        setkey(event.key);
+    };
+    return(
+        <div className='app'>
+            <h1>Welcome to pavan It Solutions
+            </h1>
+            {key &&<h2>Pressed key:{key} </h2>}
+            <input type="text" onKeyDown={handleKeyDown} placeholder="pressed here"/>
+            </div>
+    )
+}
+export default App;
