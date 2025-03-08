@@ -1,0 +1,43 @@
+package com.mru.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mru.entity.Mobiles;
+import com.mru.repo.MRURepo;
+
+@Service
+public class MRUService {
+@Autowired
+private MRURepo repo;
+
+public List<Mobiles> getAllMobiles(){
+return repo.findAll();
+}
+}
+
+
+
+
+package com.mru.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@CrossOrigin("*")
+public class MRUController {
+	@Autowired
+	private MRUService service;
+	@GetMapping("/Mobiles")
+	public List<Mobiles> getMobiles(){
+		return Service.getAllMobiles();
+		
+	}
+	
+
+}
