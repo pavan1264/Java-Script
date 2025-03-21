@@ -1,0 +1,124 @@
+package com.student.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Students {
+	@Id
+	private int id;
+	private String name;
+	private String roolno;
+	private String mobileno;
+	private String emailid;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getRoolno() {
+		return roolno;
+	}
+	public void setRoolno(String roolno) {
+		this.roolno = roolno;
+	}
+	public String getMobileno() {
+		return mobileno;
+	}
+	public void setMobileno(String mobileno) {
+		this.mobileno = mobileno;
+	}
+	public String getEmailid() {
+		return emailid;
+	}
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+	@Override
+	public String toString() {
+		return "Students [id=" + id + ", name=" + name + ", roolno=" + roolno + ", mobileno=" + mobileno + ", emailid="
+				+ emailid + "]";
+	}
+	public Students() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Students(int id, String name, String roolno, String mobileno, String emailid) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.roolno = roolno;
+		this.mobileno = mobileno;
+		this.emailid = emailid;
+	}
+	
+
+}
+
+
+
+
+package com.student.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.student.entity.Students;
+
+
+public interface MruRepo extends JpaRepository<Students, java.lang.Integer> {
+
+}
+
+
+
+package com.student.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.student.entity.Students;
+import com.student.repo.MruRepo;
+
+@Service
+public class MruService {
+	@Autowired
+	private MruRepo repo;
+	public List<Students> getAllStudents(){
+		return repo.findAll();
+	}
+
+}
+
+package com.student.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.student.entity.Students;
+import com.student.service.MruService;
+
+@CrossOrigin
+@RestController
+public class MruController {
+	@Autowired
+	private MruService service;
+	@GetMapping("/Students")
+	public List<Students> getStudents(){
+		return service.getAllStudents();
+	}
+
+}
+
