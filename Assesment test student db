@@ -122,3 +122,16 @@ public class MruController {
 
 }
 
+
+mysql> select * from student;
++--------+------+------------+--------+------------------+
+| name   | id   | mobileno   | branch | email            |
++--------+------+------------+--------+------------------+
+| pavan  |    1 | 9876543210 | Cse    | pavan@gmail.com  |
+| sai    |    2 | 8765432109 | Mech   | sai@gmail.com    |
+| bannu  |    3 | 7654321098 | Ece    | bannu@gmail.com  |
+| aditya |    4 | 7777777777 | It     | aditya@gmail.com |
+| hari   |    5 | 6666666666 | Eee    | hari@gmail.com   |
++--------+------+------------+--------+------------------+
+5 rows in set (0.00 sec)
+
